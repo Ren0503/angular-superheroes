@@ -1,0 +1,77 @@
+#search-component {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+h4 label {
+  font-size: 2em;
+  color: #fff;
+  font-family: 'Bungee Shade', cursive;
+}
+/* HeroSearch private styles */
+.search-result li {
+  text-align: center;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  width: 1000px;
+  height: 36px;
+  padding: 5px;
+  background-color: white;
+  cursor: pointer;
+  list-style-type: none;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.search-result li:hover {
+  background-color: #607D8B;
+}
+
+.search-result li a {
+  color: #888;
+  display: block;
+  text-decoration: none;
+}
+
+.search-result li a:hover {
+  color: white;
+}
+.search-result li a:active {
+  color: white;
+}
+#search-box {
+  padding: 15px;
+  width: 1000px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  outline: none;
+
+}
+
+
+ul.search-result {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}

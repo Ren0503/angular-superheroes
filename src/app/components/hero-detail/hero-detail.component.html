@@ -1,0 +1,49 @@
+<div *ngIf="hero">
+  <div class="jumbotron">
+    <h1 class="text-center p-4 monoto">{{hero.alias | uppercase}}</h1>
+  </div>
+
+  <div class="container">
+    <img src={{hero.image}} alt="" class="hero-img">
+
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Profile</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Description</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Video</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row">
+          <div class="col-3">
+            <p>Alias Name : </p>
+            <p>Real Name : </p>
+            <p>Power : </p>
+          </div>
+          <div class="col-9">
+            <p>{{hero.alias}}</p>
+            <p>{{hero.name}}</p>
+            <p>{{hero.power}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="row">
+          <p><strong>{{hero.desc}}</strong></p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="row">
+          <youtube-player
+            videoId={{hero.video}}
+            suggestedQuality="highres"
+            class="hero-video"
+          >
+          </youtube-player>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
